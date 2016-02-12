@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chatty!</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<!-- nav bar -->
+	<nav class="navbar navbar-default" id="nav">
+	  	<div class="container">
+      <!-- logo goes here -->
+      <div class="row">
+        <div class="navbar-header">
+          Chatty
+        </div>
+  	    	<form class="navbar-form navbar-left" role="search">
+  	        	<div class="form-group">
+                  <!-- keypress event listener will attach to this element -->
+  	          		<input type="text" class="form-control" id="text-input" disabled="disabled" placeholder="Enter your message">
+  	        	</div>
+  	        	<button type="delete" class="btn btn-default" id="delete">Delete All Messages</button>
+  	        </form>
+  	    </div>
+      <!-- checkboxes -->
+      <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+          <input type="checkbox" id="dark-theme">Dark Theme
+          <input type="checkbox" id="large-text">Large Text
+        </div>
+      </div>
+    </div>
+	</nav>
+	<!-- container -->
+  <h4>Messages</h4>
+	<div id="messages-container"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- IIFE #1 (load JSON) -->
+  <!-- IIFE #2 (output DOM/manage messages array) -->
+  <!-- IIFE #3 (deleter functions) -->
+</body>
+</html>
