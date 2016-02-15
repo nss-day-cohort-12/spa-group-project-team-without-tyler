@@ -12,7 +12,6 @@ var Chatty = function () {
 	      messages = messagesData.messages;
 	      console.log(messages);
 	      Chatty.getMessages(messages);
-	      return messages;
 	    });
 	  }
 	}
