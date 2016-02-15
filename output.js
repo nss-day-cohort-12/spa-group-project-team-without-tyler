@@ -26,7 +26,7 @@ var Chatty = function (output) {
 	output.outputToDOM = function(id, input) {
 		// remove disabled attribute on delete button once messages are on DOM
 		var messageDiv = "";
-		messageDiv += `<div id=${id}>`;
+		messageDiv += `<div id=${id} class="message">`;
 		messageDiv += `<span>${input}</span>`;
 		messageDiv += `<button type="delete-single" class="delete-single" id=${id}>Delete Message</button>`;
 		messageDiv += `</div>`;
