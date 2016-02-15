@@ -1,5 +1,23 @@
 #messages-container {
 	border: 1px solid black;
-	width: 70%;
 	height: 400px;
+	padding: 1%;
+	overflow: scroll;
+}
+
+#nav {
+	padding: 1%;
+}
+
+.message {
+	padding: 1%;
+}
+
+.delete-single {
+	margin-left: 1%;
+}
+
+h2 {
+	font-family: 'Chewy', cursive;
+	font-size: 3em;
 }
