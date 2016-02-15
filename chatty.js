@@ -10,6 +10,7 @@ var Chatty = function () {
 	    messageRequest.addEventListener("load", function() {
 	      var messagesData = JSON.parse(this.responseText);
 	      messages = messagesData.messages;
+	      console.log(messages);
 	      return messages;
 	    });
 	  }
