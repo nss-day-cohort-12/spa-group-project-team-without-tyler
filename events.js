@@ -11,7 +11,7 @@ textInput.addEventListener("keyup", function() {
 		textInput.value = "";
 		deleteButton.removeAttribute("disabled");
 	}
-})
+});
 
 // this is for deleting ALL messages
 var container = document.getElementById("messages-container");
@@ -22,12 +22,10 @@ deleteButton.addEventListener("click", function() {
 	event.preventDefault();
 	console.log("delete button works");
 	container.innerHTML = "";
+	messagesArray = [];
 	deleteButton.setAttribute("disabled", "disabled");
-})
+});
 
-var darkTheme = document.getElementById("dark-theme");
-
-var largeText = document.getElementById("large-text");
 
 
 document.querySelector("body").addEventListener("click", function(event) {
@@ -36,12 +34,16 @@ document.querySelector("body").addEventListener("click", function(event) {
   // Handle the click event on any DOM element with a certain class
   if (event.target.className === "delete-single") {
     console.log("You clicked a delete button");
+    console.log(event.target.id);
+    var idx = event.target.id;
+    var text = event.target.previousSibling.innerHTML;
+    console.log("text", text);
+    // this won't work until we create IIFE #3
+    Chatty.deleteSingleMessage(idx, text);
   }
-
-  // // Inspect the `id` property of the event target
-  // if (event.target.id === "page-title") {
-  //   console.log("You clicked on the page-title element");
-  // }
 });
 
 
+var darkTheme = document.getElementById("dark-theme");
+
+var largeText = document.getElementById("large-text");

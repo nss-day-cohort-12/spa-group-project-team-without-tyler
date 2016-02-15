@@ -33,8 +33,19 @@ var Chatty = function (output) {
 		container.innerHTML += messageDiv;
 	}
 
-	// output.deleteMessage = function() {
-	// }
+	output.deleteMessageFromArray = function(text) {
+		console.log("text", text);
+		for (var i = 0; i < messageArray.length; i++) {
+			if (messageArray[i] === text) {
+				console.log("match!");
+				messageArray.splice(i, 1);
+				console.log(messageArray);
+			}
+		}
+		if (messageArray.length === 0) {
+			deleteButton.setAttribute("disabled", "disabled");
+		}
+	}
 
 	return output;
 }(Chatty);
