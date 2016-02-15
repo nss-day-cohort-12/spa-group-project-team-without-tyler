@@ -1,5 +1,4 @@
 // call loadMessages fn
-var messages;
 Chatty.loadMessages();
 
 // add user message when user hits enter key
