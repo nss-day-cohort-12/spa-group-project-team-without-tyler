@@ -47,3 +47,4 @@ document.querySelector("body").addEventListener("click", function(event) {
 var darkTheme = document.getElementById("dark-theme");
 
 var largeText = document.getElementById("large-text");
+

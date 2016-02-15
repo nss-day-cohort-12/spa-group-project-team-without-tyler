@@ -5,34 +5,46 @@
 	<title>Chatty!</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div class="container">
 	<!-- nav bar -->
-	<nav class="navbar navbar-default" id="nav">
-	  	<div class="container">
-      <!-- logo goes here -->
+  	<nav class="navbar navbar-default" id="nav">
+        <!-- logo goes here -->
       <div class="row">
-        <div class="navbar-header">
-          Chatty
+        <div class="col-md-2 col-md-offset-1">
+          <h2>Chatty</h2>
         </div>
-      	<div class="form-group">
+      	<div class="col-md-6">
             <!-- keypress event listener will attach to this element -->
         		<input type="text" class="form-control" id="text-input" placeholder="Enter your message">
-      	</div>
-      	<button type="delete" class="btn btn-default" id="delete">Delete All Messages</button>
-	    </div>
+        </div>
+        <div class="col-md-3">
+            <button type="delete" class="btn btn-default" id="delete">Delete All Messages</button>
+        </div>
+    	</div>
       <!-- checkboxes -->
-      <div class="row">
-        <div class="col-md-4 col-md-offset-1">
-          <input type="checkbox" id="dark-theme">Dark Theme
-          <input type="checkbox" id="large-text">Large Text
+      <div class="row checkboxes">
+        <div class="col-md-2 col-md-offset-4">
+          <input type="checkbox" id="dark-theme"> Dark Theme
+        </div>
+        <div class="col-md-2">
+          <input type="checkbox" id="large-text"> Large Text
         </div>
       </div>
-    </div>
-	</nav>
+  	</nav>
 	<!-- container -->
-  <h4>Messages</h4>
-	<div id="messages-container"></div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-1">
+        <h4>Messages</h4>
+      </div>
+    </div>
+    <div class="row">
+  	    <div id="messages-container" class="col-md-10 col-md-offset-1"></div>
+    </div>
+  </div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="chatty.js"></script>
