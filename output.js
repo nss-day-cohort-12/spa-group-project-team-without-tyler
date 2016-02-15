@@ -4,7 +4,7 @@ var Chatty = function (output) {
 	// is this function allowed?
 	output.addMessage = function(userInput) {
 		messageArray.push(userInput);
-		Chatty.outputToDOM(messageArray.length, userInput);
+		Chatty.outputToDOM(messageArray.length - 1, userInput);
 	}
 
 	output.getMessages = function(arr) {
