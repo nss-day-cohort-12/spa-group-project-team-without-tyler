@@ -1,5 +1,5 @@
 var Chatty = function () {
-
+	var messages;
 	return {
 	   // make request for contents of messages.json
 	  loadMessages: function () {
@@ -10,7 +10,8 @@ var Chatty = function () {
 	    messageRequest.addEventListener("load", function() {
 	      var messagesData = JSON.parse(this.responseText);
 	      messages = messagesData.messages;
-	      return messages;
+	      console.log(messages);
+	      Chatty.getMessages(messages);
 	    });
 	  }
 	}
