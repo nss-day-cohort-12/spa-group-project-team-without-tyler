@@ -8,14 +8,15 @@ var Chatty = function (output) {
 	}
 
 	output.getMessages = function(arr) {
-		arr.forEach(function(msg) {
-			messageArray.push(msg.message);
-		});
+		if (arr) {
+			arr.forEach(function(msg) {
+				messageArray.push(msg.message);
+			});
+		}
 		return messageArray;
 	}
 
 	output.outputToDOM = function(id, input) {
-		// remove disabled attribute on delete button once messages are on DOM
 		var messageDiv = "";
 		messageDiv += `<div id=${id} class="message">`;
 		messageDiv += `<span>${input}</span>`;
@@ -28,7 +29,6 @@ var Chatty = function (output) {
 		console.log("text", text);
 		for (var i = 0; i < messageArray.length; i++) {
 			if (messageArray[i] === text) {
-				console.log("match!");
 				messageArray.splice(i, 1);
 				console.log(messageArray);
 			}
