@@ -6,7 +6,6 @@ var textInput = document.getElementById("text-input");
 
 textInput.addEventListener("keyup", function() {
 	if (event.keyCode === 13) {
-		console.log("you hit enter");
 		Chatty.addMessage(textInput.value);
 		textInput.value = "";
 		deleteButton.removeAttribute("disabled");
@@ -19,8 +18,6 @@ var deleteButton = document.getElementById("delete");
 deleteButton.removeAttribute("disabled");
 
 deleteButton.addEventListener("click", function() {
-	event.preventDefault();
-	console.log("delete button works");
 	container.innerHTML = "";
 	messagesArray = [];
 	deleteButton.setAttribute("disabled", "disabled");
@@ -29,15 +26,9 @@ deleteButton.addEventListener("click", function() {
 
 
 document.querySelector("body").addEventListener("click", function(event) {
-  console.log(event);
-
-  // Handle the click event on any DOM element with a certain class
   if (event.target.className === "delete-single") {
-    console.log("You clicked a delete button");
-    console.log(event.target.id);
     var id = event.target.id;
     var text = event.target.previousSibling.innerHTML;
-    console.log("text", text);
     Chatty.deleteSingleMessage(id, text);
   }
 });
