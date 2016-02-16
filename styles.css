@@ -24,6 +24,10 @@ h2 {
 	margin-top: 0;
 }
 
+.large-text-theme {
+  font-size: 2em;
+}
+
 body {
 	padding-top: 100px;
 }
