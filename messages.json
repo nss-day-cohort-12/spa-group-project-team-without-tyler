@@ -1,19 +1,19 @@
 {
 	"messages": [
 		{
-			"message": "Blahblahlah"
+			"message": "Welcome to Chatty!"
 		},
 		{
-			"message": "Bloopbloopbloop"
+			"message": "Chatty is a messaging platform for people to use with friends!"
 		},
 		{
-			"message": "Boopbopbop"
+			"message": "To get started just type in the message box above."
 		},
 		{
-			"message": "eggeggeggeggegg"
+			"message": "To delete a message just click delete and it will delete that message."
 		},
 		{
-			"message": "monkeyButtmonkeyButt"
+			"message": "Also Tyler, you're fired."
 		}
 	]
 }
