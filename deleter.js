@@ -1,9 +1,9 @@
 var Chatty = function(deleter) {
 
-	deleter.deleteSingleMessage = function(idx, text) {
-		var divToRemove = document.getElementById(idx);
+	deleter.deleteSingleMessage = function(id, text) {
+		var divToRemove = document.getElementById(id);
 		divToRemove.parentNode.removeChild(divToRemove);
-		console.log("idx inside deleter IIFE", idx);
+		console.log("id inside deleter IIFE", id);
 		Chatty.deleteMessageFromArray(text);
 	}
 
