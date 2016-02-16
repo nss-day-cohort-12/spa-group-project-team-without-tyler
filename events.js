@@ -35,11 +35,10 @@ document.querySelector("body").addEventListener("click", function(event) {
   if (event.target.className === "delete-single") {
     console.log("You clicked a delete button");
     console.log(event.target.id);
-    var idx = event.target.id;
+    var id = event.target.id;
     var text = event.target.previousSibling.innerHTML;
     console.log("text", text);
-    // this won't work until we create IIFE #3
-    Chatty.deleteSingleMessage(idx, text);
+    Chatty.deleteSingleMessage(id, text);
   }
 });
 
