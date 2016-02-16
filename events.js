@@ -47,6 +47,12 @@ var darkTheme = document.getElementById("dark-theme");
 
 var largeText = document.getElementById("large-text");
 
+var body = document.getElementById("egg");
+
+darkTheme.addEventListener("click", function() {
+	body.classList.toggle("dark-theme")
+});
+
 largeText.addEventListener("click", function(){
 // when checkbox clicked, toggle this
   container.classList.toggle("large-text-theme")
