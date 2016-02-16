@@ -31,3 +31,8 @@ h2 {
 body {
 	padding-top: 100px;
 }
+
+.dark-theme {
+	background-color: darkgrey;
+	color: white;
+}
