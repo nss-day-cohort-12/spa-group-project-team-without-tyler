@@ -7,6 +7,7 @@
 
 #nav {
 	padding: 1%;
+	background: url('http://i.imgur.com/Os4yON1.png');
 }
 
 .message {
@@ -19,5 +20,10 @@
 
 h2 {
 	font-family: 'Chewy', cursive;
-	font-size: 3em;
+	font-size: 2.5em;
+	margin-top: 0;
+}
+
+body {
+	padding-top: 100px;
 }
