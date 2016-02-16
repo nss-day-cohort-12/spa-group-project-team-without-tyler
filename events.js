@@ -47,3 +47,9 @@ var darkTheme = document.getElementById("dark-theme");
 
 var largeText = document.getElementById("large-text");
 
+largeText.addEventListener("click", function(){
+// when checkbox clicked, toggle this
+  container.classList.toggle("large-text-theme")
+  console.log(event.target);
+});
+
