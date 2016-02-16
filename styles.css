@@ -7,7 +7,7 @@
 
 #nav {
 	padding: 1%;
-	background: url('http://i.imgur.com/Os4yON1.png');
+	background: url('img/chatty-bg.png');
 }
 
 .message {
@@ -33,6 +33,14 @@ body {
 }
 
 .dark-theme {
-	background-color: darkgrey;
-	color: white;
+	background-color: #5C5C5C;
+	color: #E5E5E5;
+}
+
+.dark-theme #nav {
+	background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.4)), url('img/chatty-bg.png');
+}
+
+.dark-theme .delete-single {
+	background-color: #383838;
 }
