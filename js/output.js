@@ -1,32 +1,46 @@
 var Chatty = function (output) {
 	var messageArray = [];
 
-	// adds message to array and calls outputToDOM for that message
-	output.addMessage = function(userInput) {
-		messageArray.push(userInput);
-		Chatty.outputToDOM(messageArray.length - 1, userInput);
+	// populates messageArray from messages.json
+	output.populateArray = function(arr) {
+		arr.forEach(function(el) {
+			messageArray.push(el.message);
+		})
+		console.log(messageArray);
 	}
 
-	output.getMessages = function(arr) {
-		if (arr) {
-			arr.forEach(function(msg) {
-				messageArray.push(msg.message);
-			});
-		}
+	// adds message to array and calls outputToDOM for that message
+	output.addMessage = function(userInput, user) {
+		messageArray.push(userInput);
+		var date = new Date();
+		Chatty.outputToDOM(messageArray.length - 1, userInput, user, date);
+		console.log(messageArray);
+	}
+
+	// public getter for messageArray
+	output.getMessages = function() {
 		return messageArray;
 	}
 
-	output.outputToDOM = function(id, input) {
-		var messageDiv = "";
-		messageDiv += `<div id=${id} class="message">`;
-		messageDiv += `<span>${input}</span>`;
-		messageDiv += `<button type="delete-single" class="delete-single" id=${id}>Delete Message</button>`;
-		messageDiv += `</div>`;
-		container.innerHTML += messageDiv;
+	// output to DOM
+	output.outputToDOM = function(i, el, user, timestamp) {
+		$('#messages-container').append(`
+			<div id="message-${i}" class="message">
+				<div class="row">
+					<span class="name">${user}:</span>
+					<span>${el}</span>
+					<input type="text" class="edited-text hidden" id="edited-text-${i}">
+					<button type="edit" class="edit" id="edit-${i}">Edit</button>
+					<button type="delete-single" class="delete-single" id=${i}>Delete</button>
+				</div>
+				<div class="row">
+					<span class="time">${timestamp}</span>
+				</div>
+			</div>`);
 	}
 
+	// remove single message from messageArray
 	output.deleteMessageFromArray = function(text) {
-		console.log("text", text);
 		for (var i = 0; i < messageArray.length; i++) {
 			if (messageArray[i] === text) {
 				messageArray.splice(i, 1);
@@ -34,7 +48,7 @@ var Chatty = function (output) {
 			}
 		}
 		if (messageArray.length === 0) {
-			deleteButton.setAttribute("disabled", "disabled");
+			$('#delete').attr("disabled", "disabled");
 		}
 	}
 

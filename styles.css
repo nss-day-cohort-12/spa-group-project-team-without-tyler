@@ -1,46 +1,69 @@
 #messages-container {
 	border: 1px solid black;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.3);
 	height: 400px;
 	padding: 1%;
 	overflow: scroll;
+	margin-bottom: 4%;
 }
 
 #nav {
 	padding: 1%;
-	background: url('img/chatty-bg.png');
+	background: rgba(23,47,63,0.6);
+	color: #fff;
 }
 
 .message {
 	padding: 1%;
 }
 
-.delete-single {
-	margin-left: 1%;
+.name {
+	font-weight: bold;
 }
 
+.delete-single {
+	margin-left: 1%;
+ 	}
+
 h2 {
-	font-family: 'Chewy', cursive;
+	font-family: 'Cabin Sketch', cursive;
 	font-size: 2.5em;
 	margin-top: 0;
 }
 
+h4 {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 2em;
+}
+
 .large-text-theme {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 body {
-	padding-top: 100px;
+	padding-top: 10%;
+	background: url('img/chatty-bg.png') center;
+	color: #27170B;
+}
+
+.user {
+	padding: 1%;
+}
+
+.hidden {
+	display: none;
 }
 
 .dark-theme {
-	background-color: #5C5C5C;
+	background-color: rgba(23,47,63,0.4) !important;
 	color: #E5E5E5;
 }
 
-.dark-theme #nav {
-	background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.4)), url('img/chatty-bg.png');
+.dark-theme button {
+	background-color: #383838;
 }
 
-.dark-theme .delete-single {
-	background-color: #383838;
+.dark-theme input {
+	color: #000;
 }

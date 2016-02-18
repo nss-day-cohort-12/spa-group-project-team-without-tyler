@@ -1,18 +1,23 @@
 {
 	"messages": [
 		{
+			"user": "Dumbledore",
 			"message": "Welcome to Chatty!"
 		},
 		{
+			"user": "Dumbledore",
 			"message": "Chatty is a messaging platform for people to use with friends!"
 		},
 		{
+			"user": "Dumbledore",
 			"message": "To get started just type in the message box above."
 		},
 		{
+			"user": "Dumbledore",
 			"message": "To delete a message just click delete and it will delete that message."
 		},
 		{
+			"user": "Dumbledore",
 			"message": "Also Tyler, you're fired."
 		}
 	]

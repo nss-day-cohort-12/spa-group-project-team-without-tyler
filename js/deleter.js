@@ -1,8 +1,7 @@
 var Chatty = function(deleter) {
 
 	deleter.deleteSingleMessage = function(id, text) {
-		var divToRemove = document.getElementById(id);
-		divToRemove.parentNode.removeChild(divToRemove);
+		$("#message-" + id).remove();
 		Chatty.deleteMessageFromArray(text);
 	}
 
