@@ -1,4 +1,5 @@
-var Chatty = function () {
+"use strict";
+let Chatty = function () {
 
 	return {
 	   // make request for contents of messages.json
@@ -8,9 +9,9 @@ var Chatty = function () {
 			}).done(createObject);
 
 			function createObject(messageData) {
-				var messages = messageData.messages;
-				for (var i = 0; i < messages.length; i++) {
-					var curr = messages[i];
+				let messages = messageData.messages;
+				for (let i = 0; i < messages.length; i++) {
+					let curr = messages[i];
 					messages[i].timestamp = new Date();
 					Chatty.outputToDOM(i, curr.message, curr.user, curr.timestamp);
 				}
@@ -18,5 +19,6 @@ var Chatty = function () {
 				Chatty.populateArray(messages);
 			}
 	  	}
-	}
+	};
 }();
+

@@ -1,11 +1,12 @@
+"use strict";
 // call loadMessages fn
 Chatty.loadMessages();
-var user;
+let user;
 
 // choose a user
 $('.user').on('click', function() {
 	user = $(this).val();
-})
+});
 
 // add user message on enter keypress
 $('#text-input').on('keyup', function(event){
@@ -25,20 +26,20 @@ $('#delete').on('click', function(){
 	$('#messages-container').html('');
 	messagesArray = [];
 	$(this).attr('disabled', 'disabled');
-})
+});
 
 // single message delete buttons
 $(document).on('click', 'button[class="delete-single"]', function(){
-	var id = $(this).attr('id');
-	var text = $(this).prev().html();
+	let id = $(this).attr('id');
+	let text = $(this).prev().html();
 	Chatty.deleteSingleMessage(id, text);
 });
 
 // edit buttons
 $(document).on('click', 'button[id*="edit"]', function(){
 	// assign message text to variable
-	var textToReset = $(this).prev().prev();
-	var editBox = $(this).prev();
+	let textToReset = $(this).prev().prev();
+	let editBox = $(this).prev();
 	console.log(textToReset);
 	// show input field
 	$(editBox).toggleClass('hidden');
@@ -49,9 +50,9 @@ $(document).on('click', 'button[id*="edit"]', function(){
 	$(editBox).on('keyup', function(event) {
 		if (event.which === 13) {
 			// replace original time with edited time
-			var timeChange = new Date();
+			let timeChange = new Date();
 			console.log("time?", timeChange);
-			var timeSlot = $(editBox).parent().next().children();
+			let timeSlot = $(editBox).parent().next().children();
 			$(timeSlot).html(`Edited ${timeChange}`);
 			// hide input
 			$(editBox).toggleClass('hidden');
@@ -60,7 +61,7 @@ $(document).on('click', 'button[id*="edit"]', function(){
 
 		}
 		// bind edits to div immediately
-		var newText = $(editBox).val();
+		let newText = $(editBox).val();
 		$(textToReset).html(newText);
 	});
 });
@@ -69,10 +70,10 @@ $(document).on('click', 'button[id*="edit"]', function(){
 // dark theme
 $('#dark-theme').on('click', function(){
 	$('#messages-container').toggleClass('dark-theme');
-})
+});
 
 // large text
 $('#large-text').on('click', function(){
 	$('#messages-container').toggleClass('large-text-theme');
-})
+});
 

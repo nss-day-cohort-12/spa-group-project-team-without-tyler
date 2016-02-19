@@ -1,0 +1,27 @@
+{
+  "name": "spa-group-project-team-without-tyler",
+  "version": "1.0.0",
+  "description": "## Setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nss-day-cohort-12/spa-group-project-team-without-tyler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nss-day-cohort-12/spa-group-project-team-without-tyler/issues"
+  },
+  "homepage": "https://github.com/nss-day-cohort-12/spa-group-project-team-without-tyler#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jslint": "^0.2.2",
+    "gulp-watch": "^4.3.5"
+  },
+  "dependencies": {
+    "jquery": "^2.2.0"
+  }
+}

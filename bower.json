@@ -1,0 +1,21 @@
+{
+  "name": "spa-group-project-team-without-tyler",
+  "homepage": "https://github.com/nss-day-cohort-12/spa-group-project-team-without-tyler",
+  "description": "Chatty app with jQuery added",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Dylan Thomas"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0"
+  }
+}

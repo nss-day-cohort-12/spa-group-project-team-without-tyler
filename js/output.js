@@ -1,26 +1,27 @@
-var Chatty = function (output) {
-	var messageArray = [];
+"use strict";
+Chatty = function (output) {
+	let messageArray = [];
 
 	// populates messageArray from messages.json
 	output.populateArray = function(arr) {
-		arr.forEach(function(el) {
+		arr.forEach((el) => {
 			messageArray.push(el.message);
-		})
+		});
 		console.log(messageArray);
-	}
+	};
 
 	// adds message to array and calls outputToDOM for that message
 	output.addMessage = function(userInput, user) {
 		messageArray.push(userInput);
-		var date = new Date();
+		let date = new Date();
 		Chatty.outputToDOM(messageArray.length - 1, userInput, user, date);
 		console.log(messageArray);
-	}
+	};
 
 	// public getter for messageArray
 	output.getMessages = function() {
 		return messageArray;
-	}
+	};
 
 	// output to DOM
 	output.outputToDOM = function(i, el, user, timestamp) {
@@ -37,11 +38,11 @@ var Chatty = function (output) {
 					<span class="time">${timestamp}</span>
 				</div>
 			</div>`);
-	}
+	};
 
 	// remove single message from messageArray
 	output.deleteMessageFromArray = function(text) {
-		for (var i = 0; i < messageArray.length; i++) {
+		for (let i = 0; i < messageArray.length; i++) {
 			if (messageArray[i] === text) {
 				messageArray.splice(i, 1);
 				console.log(messageArray);
@@ -50,7 +51,7 @@ var Chatty = function (output) {
 		if (messageArray.length === 0) {
 			$('#delete').attr("disabled", "disabled");
 		}
-	}
+	};
 
 	return output;
 }(Chatty);
